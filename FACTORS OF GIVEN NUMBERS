@@ -1,0 +1,29 @@
+# Function to find factors of a given number
+find_factors <- function(n) {
+  factors <- c()
+  
+  # Iterate from 1 to sqrt(n)
+  for (i in 1:sqrt(n)) {
+    # Check if i divides n without leaving a remainder
+    if (n %% i == 0) {
+      factors <- c(factors, i)  # Add i to factors
+      if (i != n/i) {
+        factors <- c(factors, n/i)  # Add n/i to factors (except when i = n/i)
+      }
+    }
+  }
+  
+  # Sort the factors in ascending order
+  factors <- sort(factors)
+  
+  return(factors)
+}
+
+# Get user input for the number
+num <- as.integer(readline(prompt = "Enter a number to find its factors: "))
+
+# Find factors of the given number
+result <- find_factors(num)
+
+# Print the factors
+cat("Factors of", num, "are:", result, "\n")
