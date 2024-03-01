@@ -1,0 +1,26 @@
+# Function to find all prime numbers up to a given number using Sieve of Eratosthenes
+sieve_of_eratosthenes <- function(n) {
+  # Create a logical vector "primes" of length n+1, initialized as TRUE
+  primes <- rep(TRUE, n+1)
+  primes[1] <- FALSE  # 1 is not a prime number
+  
+  # Iterate through numbers starting from 2 up to the square root of n
+  for (i in 2:sqrt(n)) {
+    # If primes[i] is TRUE (i.e., i is prime), mark multiples of i as FALSE
+    if (primes[i]) {
+      primes[i^2:n] <- FALSE
+    }
+  }
+  
+  # Return the indices (which are prime) from 2 to n
+  return(which(primes))
+}
+
+# Get user input for the upper limit
+n <- as.integer(readline(prompt = "Enter a number to find all prime numbers up to it: "))
+
+# Find all prime numbers up to n
+prime_numbers <- sieve_of_eratosthenes(n)
+
+# Print the prime numbers
+cat("Prime numbers up to", n, ":", prime_numbers, "\n")
