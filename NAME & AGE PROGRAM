@@ -1,0 +1,23 @@
+# Function to take input from the user
+getUserInput <- function() {
+  name <- readline(prompt = "Enter your name: ")
+  age <- as.numeric(readline(prompt = "Enter your age: "))
+  
+  return(list(name = name, age = age))
+}
+
+# Main function
+main <- function() {
+  # Get user input
+  user <- getUserInput()
+  
+  # Display the values
+  cat("Name:", user$name, "\n")
+  cat("Age:", user$age, "\n")
+  
+  # Print R version
+  cat("R Version:", R.version.string, "\n")
+}
+
+# Call the main function
+main()
