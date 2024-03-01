@@ -1,0 +1,21 @@
+# Create some sample objects
+x <- 1:10
+y <- "Hello, World!"
+z <- list(a = 1, b = 2, c = 3)
+
+# Function to get details of objects in memory
+getMemoryDetails <- function() {
+  # List objects in memory
+  objects <- ls()
+
+  # Print details of each object
+  for (obj in objects) {
+    cat("Object Name:", obj, "\n")
+    cat("Object Type:", typeof(get(obj)), "\n")
+    cat("Object Size:", object.size(get(obj)), "bytes\n")
+    cat("\n")
+  }
+}
+
+# Call the function to get memory details
+getMemoryDetails()
