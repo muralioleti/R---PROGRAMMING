@@ -1,0 +1,17 @@
+# Define a sample vector
+vector <- c(5, 10, 3, 8, 15, 2)
+
+# Function to find maximum and minimum values of a vector
+find_max_min <- function(vec) {
+  max_value <- max(vec)  # Find maximum value
+  min_value <- min(vec)  # Find minimum value
+  
+  return(list(maximum = max_value, minimum = min_value))
+}
+
+# Call the function to find maximum and minimum values
+result <- find_max_min(vector)
+
+# Print the results
+cat("Maximum value:", result$maximum, "\n")
+cat("Minimum value:", result$minimum, "\n")
