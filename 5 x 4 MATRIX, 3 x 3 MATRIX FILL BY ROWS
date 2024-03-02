@@ -1,0 +1,23 @@
+# Create a 5x4 matrix with row labels
+matrix_5x4 <- matrix(1:20, nrow = 5, ncol = 4, byrow = TRUE)
+rownames(matrix_5x4) <- c("Row1", "Row2", "Row3", "Row4", "Row5")
+colnames(matrix_5x4) <- c("Col1", "Col2", "Col3", "Col4")
+
+# Create a 3x3 matrix with row and column labels
+matrix_3x3 <- matrix(21:29, nrow = 3, ncol = 3)
+rownames(matrix_3x3) <- c("R1", "R2", "R3")
+colnames(matrix_3x3) <- c("C1", "C2", "C3")
+
+# Create a 2x2 matrix with column labels
+matrix_2x2 <- matrix(31:34, nrow = 2, ncol = 2, byrow = FALSE)
+colnames(matrix_2x2) <- c("Column1", "Column2")
+
+# Print the matrices
+print("5x4 Matrix:")
+print(matrix_5x4)
+
+print("3x3 Matrix:")
+print(matrix_3x3)
+
+print("2x2 Matrix:")
+print(matrix_2x2)
