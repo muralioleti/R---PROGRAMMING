@@ -1,0 +1,5 @@
+# Draw an empty plot
+plot.new()
+
+# Draw an empty plot with specified axes limits
+plot(NA, xlim = c(0, 10), ylim = c(0, 20), xlab = "X-axis", ylab = "Y-axis")
